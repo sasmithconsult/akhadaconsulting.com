@@ -5,6 +5,7 @@ export default function sitemap() {
     "/advisory",
     "/execution",
     "/execution/global-teams",
+    "/execution/global-teams/dedicated-operator",
     "/affordable-housing-advisory",
     "/podcast",
     "/privacy-policy",
