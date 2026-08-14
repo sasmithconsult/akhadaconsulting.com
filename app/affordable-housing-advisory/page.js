@@ -1,6 +1,7 @@
-import PageHero from "@/components/PageHero";
+import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import CTA from "@/components/CTA";
+
 export const metadata = {
   title: "Affordable Housing & Public Funding Advisory",
   description:
@@ -13,6 +14,7 @@ export const metadata = {
       "Navigate government. Clarify funding paths. Advance affordable housing.",
   },
 };
+
 const serve = [
   "Affordable housing developers",
   "Multifamily developers exploring affordable or workforce housing",
@@ -21,20 +23,45 @@ const serve = [
   "Public-private housing partnerships",
   "Professional-services organizations needing public-sector housing expertise",
 ];
+
 export default function Housing() {
   return (
     <div className="housing-page">
-      <PageHero
-        light
-        kicker="Affordable Housing & Public Funding Advisory"
-        title="Navigate Government. Advance Affordable Housing."
-      >
-        <p>
-          Akhada Consulting helps affordable housing developers and
-          organizations navigate public funding programs, government agencies,
-          program requirements, and public-sector partnerships.
-        </p>
-      </PageHero>
+      <SiteHeader light />
+
+      <section className="housing-hero">
+        <img
+          className="housing-hero-image"
+          src="/images/housing-hero.jpg"
+          alt="Modern multifamily affordable housing development"
+        />
+        <div className="housing-hero-overlay" />
+        <div className="housing-hero-inner">
+          <p className="eyebrow">Public-Sector Partnership</p>
+          <h1>Affordable Housing &amp; Public Funding Advisory</h1>
+          <p className="housing-hero-lede">
+            Affordable housing development requires more than a viable property
+            and a strong financial plan. Developers must navigate public funding
+            programs, government priorities, agency requirements, and community
+            interests.
+          </p>
+          <p className="housing-hero-copy">
+            Akhada Consulting helps affordable housing developers and
+            organizations understand the public-sector landscape, identify viable
+            funding and partnership opportunities, and move complex housing
+            initiatives forward.
+          </p>
+          <a
+            className="button housing-hero-cta"
+            href="https://calendly.com/scott8smith/founder-strategy-conversation"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Schedule a housing strategy conversation →
+          </a>
+        </div>
+      </section>
+
       <main>
         <section className="content-block">
           <div className="split">
@@ -54,6 +81,7 @@ export default function Housing() {
             ))}
           </div>
         </section>
+
         <section className="content-block light-section">
           <p className="eyebrow">How we help</p>
           <h2>From opportunity to implementation.</h2>
@@ -100,6 +128,7 @@ export default function Housing() {
             </div>
           </div>
         </section>
+
         <section className="content-block approach">
           <p className="eyebrow">Our approach</p>
           <h2>Move complex work forward with discipline.</h2>
@@ -141,12 +170,14 @@ export default function Housing() {
             </p>
           </div>
         </section>
+
         <CTA
           eyebrow="Discuss a housing opportunity"
           title="Bring public-sector clarity to the work ahead."
           text="Connect with Scott Smith and Akhada Consulting to discuss the program, partnership, funding path, or implementation challenge in front of you."
         />
       </main>
+
       <SiteFooter />
     </div>
   );
