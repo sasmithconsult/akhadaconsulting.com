@@ -105,6 +105,29 @@ export default function GlobalTeams() {
             </p>
           </div>
         </section>
+        <section className="content-block light-section">
+          <div className="teaser-box">
+            <p className="eyebrow">Dedicated capacity</p>
+            <h2>Need the operator, not another advisory engagement?</h2>
+            <p>
+              Akhada can also help place a dedicated full-time offshore operator
+              into your business for executive administration, CRM and
+              GoHighLevel operations, project coordination, or back-office
+              execution. We help clarify the role before matching the person.
+            </p>
+            <p>
+              Dedicated operator engagements start at <strong>$3,000 per month</strong>.
+            </p>
+            <div className="button-row">
+              <Link
+                className="button"
+                href="/execution/global-teams/dedicated-operator"
+              >
+                Explore dedicated operators →
+              </Link>
+            </div>
+          </div>
+        </section>
         <CTA title="Make global capacity work as part of a clear operating system." />
       </main>
       <SiteFooter />
