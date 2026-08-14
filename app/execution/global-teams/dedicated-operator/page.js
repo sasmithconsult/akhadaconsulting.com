@@ -3,7 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import CTA from "@/components/CTA";
 import Link from "next/link";
 
-const bookingUrl = "https://calendly.com/scott8smith/founder-strategy-conversation";
+const bookingUrl = "https://calendly.com/scott8smith/dedicated-operator-conversation";
 
 export const metadata = {
   title: "Dedicated Offshore Operators",
