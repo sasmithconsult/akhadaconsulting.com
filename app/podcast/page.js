@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -58,27 +59,10 @@ export default function PodcastPage() {
               >
                 Listen to the Podcast ↗
               </a>
-              <a
-                className="button outline"
-                href="https://calendly.com/scott8smith/founder-strategy-conversation"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Start a Conversation ↗
-              </a>
+              <Link className="text-link" href="/advisory">
+                Explore Akhada Advisory →
+              </Link>
             </div>
-            <p className="podcast-access-note">
-              Browse the complete episode archive and listen on your preferred
-              platform through the{" "}
-              <a
-                href="https://thestoicinnerstrategy.buzzsprout.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Buzzsprout show page
-              </a>
-              .
-            </p>
           </div>
         </section>
         <section className="section podcast-themes">
