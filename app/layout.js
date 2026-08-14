@@ -12,8 +12,8 @@ export const metadata = {
     "Principal advisory for founders and executives building leadership capacity, operating clarity, and organizations that function beyond the founder.",
   alternates: { canonical: "/" },
   icons: {
-    icon: [{ url: "/images/akhada-logo.png", type: "image/png" }],
-    apple: "/images/akhada-logo.png",
+    icon: [{ url: "/images/akhada-favicon.png", type: "image/png" }],
+    apple: "/images/akhada-favicon.png",
   },
   openGraph: {
     type: "website",
