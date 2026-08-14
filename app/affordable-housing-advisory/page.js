@@ -53,7 +53,7 @@ export default function Housing() {
           </p>
           <a
             className="button housing-hero-cta"
-            href="https://calendly.com/scott8smith/founder-strategy-conversation"
+            href="https://calendly.com/scott8smith/housing-strategy-conversation"
             target="_blank"
             rel="noreferrer"
           >
