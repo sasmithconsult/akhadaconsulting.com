@@ -79,10 +79,12 @@ export default function Home() {
             <p className="eyebrow">Experience under pressure</p>
             <h2>Advice grounded in operating reality.</h2>
             <p className="muted">
-              Scott Smith brings decades of founder, executive, global-team, and
-              advisory experience to the work. Akhada’s perspective is
-              practical: leadership is demonstrated through judgment,
-              responsibility, and the systems that allow others to act well.
+              Scott Smith has spent 28 years building, leading, and advising
+              organizations, including building teams across the U.S. and India
+              and operating through periods of rapid growth, M&A, and
+              organizational change. Akhada’s perspective is practical:
+              leadership is demonstrated through judgment, responsibility, and
+              the systems that allow others to act well.
             </p>
           </div>
           <figure className="principal-portrait">
@@ -113,8 +115,9 @@ export default function Home() {
               <span className="card-num">01 / ADVISORY</span>
               <h3>Leadership &amp; Management Advisory</h3>
               <p>
-                Sharper judgment, stronger ownership, and management capacity
-                for organizations that have outgrown founder-led coordination.
+                Clarify the decisions that matter, who has the right to make
+                them, and how leaders exercise judgment when the answer is not
+                obvious.
               </p>
               <span className="text-link">Explore advisory →</span>
             </Link>
@@ -122,8 +125,8 @@ export default function Home() {
               <span className="card-num">02 / EXECUTION</span>
               <h3>Operating Clarity &amp; Execution</h3>
               <p>
-                Clarify decisions, responsibilities, handoffs, and management
-                rhythms so priorities reliably become outcomes.
+                Turn priorities into operating reality through clearer handoffs,
+                management cadence, meeting structure, and follow-through.
               </p>
               <span className="text-link">Explore execution →</span>
             </Link>
@@ -131,8 +134,9 @@ export default function Home() {
               <span className="card-num">03 / GLOBAL TEAMS</span>
               <h3>Global Teams</h3>
               <p>
-                Make offshore and outsourced capacity serve a clear
-                strategy—with authority and accountability designed first.
+                Design offshore and outsourced work so authority travels with
+                responsibility—without creating another layer of dependency
+                back on the founder.
               </p>
               <span className="text-link">Explore global teams →</span>
             </Link>
@@ -201,21 +205,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section housing-teaser">
-          <div className="teaser-box">
-            <p className="eyebrow">Specialist practice</p>
-            <h2>Affordable Housing &amp; Public Funding Advisory</h2>
-            <p>
-              A focused practice helping developers, organizations, and public
-              partners navigate government, clarify funding paths, structure
-              partnerships, and advance affordable housing.
-            </p>
-            <Link className="button" href="/affordable-housing-advisory">
-              Explore the practice →
-            </Link>
-          </div>
-        </section>
-        <CTA />
+        <CTA
+          title="Turn founder-led coordination into a management system that can carry the next stage of growth."
+          text="If decisions still converge on you, a focused conversation can surface where judgment, ownership, or operating structure is breaking down—and what to change first."
+        />
       </main>
       <SiteFooter />
     </>
