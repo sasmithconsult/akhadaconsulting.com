@@ -1,5 +1,23 @@
 .brand {
-  gap: 0;
+  gap: 10px;
+}
+
+.brand-mark {
+  width: 28px;
+  height: 33px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  background: #fff;
+  overflow: hidden;
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .brand-wordmark {
@@ -12,6 +30,10 @@
 
 .brand-wordmark small {
   margin-top: 1px;
+}
+
+.housing-page .nav-cta {
+  color: #fff;
 }
 
 /* Affordable housing hero: match the original light-page composition. */
@@ -104,6 +126,11 @@
 }
 
 @media (max-width: 800px) {
+  .brand-mark {
+    width: 24px;
+    height: 29px;
+  }
+
   .housing-hero {
     min-height: auto;
     padding: 130px 24px 80px;
