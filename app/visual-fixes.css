@@ -1,0 +1,93 @@
+.brand {
+  gap: 0;
+}
+
+.brand-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  white-space: nowrap;
+  letter-spacing: 0.22em;
+}
+
+.brand-wordmark small {
+  margin-top: 1px;
+}
+
+.light-hero {
+  background: #eef1ef;
+  overflow: hidden;
+}
+
+.light-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 28%;
+  z-index: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #eef1ef 0%,
+      rgba(238, 241, 239, 0.98) 12%,
+      rgba(238, 241, 239, 0.72) 30%,
+      rgba(238, 241, 239, 0.18) 52%,
+      rgba(238, 241, 239, 0) 68%
+    ),
+    url("/images/housing-hero.jpg");
+  background-size: 100% 100%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+.light-hero .hero-rule,
+.light-hero .page-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.light-hero .page-hero-inner {
+  max-width: 720px;
+}
+
+.light-hero h1 {
+  max-width: 780px;
+  font-size: clamp(3rem, 5vw, 5.2rem);
+}
+
+.light-hero .lede {
+  max-width: 620px;
+}
+
+.podcast-cover-wrap,
+.podcast-page-art {
+  box-shadow: 20px 20px 0 rgba(49, 164, 191, 0.16);
+}
+
+.podcast-cover,
+.podcast-page-art img {
+  outline: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 800px) {
+  .light-hero::before {
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(238, 241, 239, 0.96) 0%,
+        rgba(238, 241, 239, 0.9) 52%,
+        rgba(238, 241, 239, 0.58) 100%
+      ),
+      url("/images/housing-hero.jpg");
+    background-size: cover, cover;
+    background-position: center, center;
+  }
+
+  .light-hero .page-hero-inner {
+    max-width: 100%;
+  }
+
+  .light-hero h1 {
+    font-size: clamp(2.9rem, 13vw, 4.7rem);
+  }
+}
