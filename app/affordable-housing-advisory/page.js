@@ -63,6 +63,25 @@ export default function Housing() {
       </section>
 
       <main>
+        <section className="content-block split">
+          <div>
+            <p className="eyebrow">The hidden friction</p>
+            <h2>Good housing projects can still stall for reasons that have little to do with the property.</h2>
+          </div>
+          <div>
+            <p className="section-intro">
+              Funding sources do not always align. Agency priorities and
+              requirements shift. Public and private partners bring different
+              incentives, timelines, and definitions of success. Coordination
+              breaks down when everyone assumes someone else owns the next move.
+            </p>
+            <p className="principle">
+              Akhada helps clarify that operating landscape so viable housing
+              initiatives can move forward.
+            </p>
+          </div>
+        </section>
+
         <section className="content-block">
           <div className="split">
             <div>
@@ -70,9 +89,8 @@ export default function Housing() {
               <h2>Housing work across public and private boundaries.</h2>
             </div>
             <p className="section-intro">
-              Affordable housing requires more than a viable development
-              concept. It requires alignment among capital, programs, agencies,
-              communities, and implementation partners.
+              We work where development, public programs, government processes,
+              community interests, and implementation responsibilities intersect.
             </p>
           </div>
           <div className="serve-list">
@@ -87,43 +105,51 @@ export default function Housing() {
           <h2>From opportunity to implementation.</h2>
           <div className="service-grid">
             <div className="service-item">
-              <h3>01. Clarify Funding Paths</h3>
+              <h3>Funding Strategy</h3>
+              <p>
+                Identify viable public funding paths, eligibility requirements,
+                and the agencies and programs that shape the opportunity.
+              </p>
               <ul>
-                <li>Public funding opportunity and eligibility assessment</li>
-                <li>LIHTC agency, process, and public-sector navigation</li>
-                <li>HUD, HOME, CDBG, and related programs</li>
-                <li>State and local funding</li>
-                <li>Application coordination and public-funding strategy</li>
+                <li>LIHTC and public-funding navigation</li>
+                <li>HUD, HOME, CDBG, state, and local resources</li>
+                <li>Funding strategy and application coordination</li>
               </ul>
             </div>
             <div className="service-item">
-              <h3>02. Navigate Government</h3>
+              <h3>Government Navigation</h3>
+              <p>
+                Understand how agency requirements, public priorities, approvals,
+                and stakeholders affect the path from concept to implementation.
+              </p>
               <ul>
-                <li>Municipal, county, state, and federal agency engagement</li>
-                <li>Interpretation of public processes</li>
-                <li>Stakeholder coordination</li>
-                <li>Communication strategy</li>
-                <li>Navigation of agency priorities</li>
+                <li>Municipal, county, state, and federal engagement</li>
+                <li>Public-process navigation</li>
+                <li>Stakeholder and agency coordination</li>
               </ul>
             </div>
             <div className="service-item">
-              <h3>03. Structure Partnerships</h3>
+              <h3>Partnership Strategy</h3>
+              <p>
+                Structure the relationships required when public, private,
+                nonprofit, and community interests must move together.
+              </p>
               <ul>
-                <li>Early-stage opportunity assessment</li>
                 <li>Public-private partnership strategy</li>
-                <li>Government and community alignment</li>
                 <li>Partner and resource identification</li>
-                <li>Affordable and workforce housing strategy</li>
+                <li>Government and community alignment</li>
               </ul>
             </div>
             <div className="service-item">
-              <h3>04. Support Implementation</h3>
+              <h3>Implementation Support</h3>
+              <p>
+                Keep complex public-sector work moving once the strategy becomes
+                an operating responsibility.
+              </p>
               <ul>
-                <li>Housing program design and administration</li>
-                <li>Implementation planning</li>
-                <li>Reporting and documentation support</li>
-                <li>Compliance-process coordination</li>
-                <li>Cross-agency coordination</li>
+                <li>Implementation planning and coordination</li>
+                <li>Reporting, documentation, and compliance processes</li>
+                <li>Cross-agency and program-administration support</li>
               </ul>
             </div>
           </div>
@@ -162,11 +188,13 @@ export default function Housing() {
             </div>
           </div>
           <div className="capability">
-            <p className="eyebrow">Current capability</p>
+            <p className="eyebrow">Time-sensitive implementation support</p>
             <h3>ARPA Housing Implementation and Closeout Support</h3>
             <p>
-              Support for organizations working through program implementation,
-              coordination, documentation, reporting, and closeout requirements.
+              For organizations already carrying ARPA-funded housing work,
+              Akhada can assist with the coordination, documentation, reporting,
+              implementation, and closeout work required to bring the program
+              through completion.
             </p>
           </div>
         </section>
