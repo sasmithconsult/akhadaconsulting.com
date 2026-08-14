@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  background: #fff;
   overflow: hidden;
 }
 
@@ -113,6 +112,25 @@
 .housing-hero-cta {
   margin-top: 16px;
   color: #fff;
+}
+
+/* Preserve the dark-teal housing approach section while restoring readable contrast. */
+.housing-page .approach > .eyebrow,
+.housing-page .approach-flow span {
+  color: #82d5d6;
+}
+
+.housing-page .approach > h2,
+.housing-page .approach-flow strong {
+  color: #f7faf9;
+}
+
+.housing-page .approach-flow p {
+  color: #d5e4e1;
+}
+
+.housing-page .approach-flow div {
+  border-left-color: rgba(213, 228, 225, 0.32);
 }
 
 .podcast-cover-wrap,
