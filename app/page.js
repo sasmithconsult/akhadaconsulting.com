@@ -88,11 +88,11 @@ export default function Home() {
           <figure className="principal-portrait">
             <img
               src="/images/scott-smith-headshot.png"
-              alt="Scott Smith, principal of Akhada Consulting"
+              alt="Scott Smith, Principal Advisor at Akhada Consulting"
               width="1024"
               height="1024"
             />
-            <figcaption>Scott Smith · Principal</figcaption>
+            <figcaption>Scott Smith · Principal Advisor</figcaption>
           </figure>
           <blockquote className="quote">
             The goal is not to make the leader less important. It is to make the
