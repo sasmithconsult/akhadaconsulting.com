@@ -204,7 +204,6 @@ export default function Housing() {
   title="Bring public-sector clarity to the work ahead."
   text="Connect with Scott Smith and Akhada Consulting to discuss the program, partnership, funding path, or implementation challenge in front of you."
   href="https://calendly.com/scott8smith/housing-strategy-conversation"
-/>
         />
       </main>
 
