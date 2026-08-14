@@ -14,80 +14,126 @@
   margin-top: 1px;
 }
 
-.light-hero {
-  background: #eef1ef;
+/* Affordable housing hero: intentionally mirrors the proven light-page concept. */
+.housing-hero {
+  position: relative;
+  min-height: 760px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  color: #0f172a;
+  background: #f8fafc;
+  padding: 130px max(32px, calc((100vw - var(--max)) / 2)) 70px;
 }
 
-.light-hero::before {
-  content: "";
+.housing-hero-image {
   position: absolute;
-  inset: 0 0 0 28%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
   z-index: 0;
-  background:
-    linear-gradient(
-      90deg,
-      #eef1ef 0%,
-      rgba(238, 241, 239, 0.98) 12%,
-      rgba(238, 241, 239, 0.72) 30%,
-      rgba(238, 241, 239, 0.18) 52%,
-      rgba(238, 241, 239, 0) 68%
-    ),
-    url("/images/housing-hero.jpg");
-  background-size: 100% 100%, cover;
-  background-position: center, center;
-  background-repeat: no-repeat;
 }
 
-.light-hero .hero-rule,
-.light-hero .page-hero-inner {
+.housing-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 250, 252, 1) 0%,
+    rgba(248, 250, 252, 0.99) 35%,
+    rgba(248, 250, 252, 0.94) 47%,
+    rgba(248, 250, 252, 0.68) 60%,
+    rgba(248, 250, 252, 0.22) 76%,
+    rgba(248, 250, 252, 0) 100%
+  );
+}
+
+.housing-hero-inner {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 680px;
 }
 
-.light-hero .page-hero-inner {
-  max-width: 720px;
+.housing-hero .eyebrow {
+  color: var(--teal);
+  margin-bottom: 20px;
 }
 
-.light-hero h1 {
-  max-width: 780px;
-  font-size: clamp(3rem, 5vw, 5.2rem);
+.housing-hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  max-width: 660px;
 }
 
-.light-hero .lede {
-  max-width: 620px;
+.housing-hero-lede {
+  margin-top: 30px;
+  color: #334155;
+  font-size: 1.18rem;
+  line-height: 1.65;
+  max-width: 650px;
+}
+
+.housing-hero-copy {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 625px;
+}
+
+.housing-hero-cta {
+  margin-top: 14px;
+  color: #fff;
 }
 
 .podcast-cover-wrap,
 .podcast-page-art {
-  box-shadow: 20px 20px 0 rgba(49, 164, 191, 0.16);
+  box-shadow: 20px 20px 0 rgba(49, 164, 191, 0.10);
 }
 
 .podcast-cover,
 .podcast-page-art img {
-  outline: 1px solid rgba(255, 255, 255, 0.08);
+  outline: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 @media (max-width: 800px) {
-  .light-hero::before {
-    inset: 0;
-    background:
-      linear-gradient(
-        180deg,
-        rgba(238, 241, 239, 0.96) 0%,
-        rgba(238, 241, 239, 0.9) 52%,
-        rgba(238, 241, 239, 0.58) 100%
-      ),
-      url("/images/housing-hero.jpg");
-    background-size: cover, cover;
-    background-position: center, center;
+  .housing-hero {
+    min-height: auto;
+    padding: 130px 24px 80px;
+    align-items: flex-end;
   }
 
-  .light-hero .page-hero-inner {
-    max-width: 100%;
+  .housing-hero-image {
+    object-position: 64% center;
   }
 
-  .light-hero h1 {
-    font-size: clamp(2.9rem, 13vw, 4.7rem);
+  .housing-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(248, 250, 252, 0.52) 0%,
+      rgba(248, 250, 252, 0.86) 32%,
+      rgba(248, 250, 252, 0.98) 62%,
+      rgba(248, 250, 252, 1) 100%
+    );
+  }
+
+  .housing-hero h1 {
+    font-size: clamp(2.5rem, 12vw, 3.6rem);
+  }
+
+  .housing-hero-lede {
+    font-size: 1.05rem;
+  }
+
+  .housing-hero-cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 }
