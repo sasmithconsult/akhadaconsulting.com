@@ -53,7 +53,7 @@ export default function Housing() {
           </p>
           <a
             className="button housing-hero-cta"
-            href="https://calendly.com/scott8smith/founder-strategy-conversation"
+            href="https://calendly.com/scott8smith/housing-strategy-conversation"
             target="_blank"
             rel="noreferrer"
           >
@@ -203,6 +203,7 @@ export default function Housing() {
           eyebrow="Discuss a housing opportunity"
           title="Bring public-sector clarity to the work ahead."
           text="Connect with Scott Smith and Akhada Consulting to discuss the program, partnership, funding path, or implementation challenge in front of you."
+          href="https://calendly.com/scott8smith/housing-strategy-conversation"
         />
       </main>
 
