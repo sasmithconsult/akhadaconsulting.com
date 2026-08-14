@@ -22,7 +22,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-content">
             <p className="eyebrow">
-              Principal advisory for consequential growth
+              Principal advisory for judgment, leadership, and execution.
             </p>
             <h1>
               You built a successful business. It shouldn’t still require you
