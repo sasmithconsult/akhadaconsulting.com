@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./visual-fixes.css";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata = {
