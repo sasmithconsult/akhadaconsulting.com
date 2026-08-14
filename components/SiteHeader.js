@@ -8,6 +8,7 @@ const links = [
   ["Execution", "/execution"],
   ["Global Teams", "/execution/global-teams"],
   ["Affordable Housing", "/affordable-housing-advisory"],
+  ["Podcast", "/podcast"],
 ];
 export default function SiteHeader({ light = false }) {
   const [open, setOpen] = useState(false);

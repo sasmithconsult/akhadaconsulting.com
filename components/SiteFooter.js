@@ -17,6 +17,7 @@ export default function SiteFooter() {
           <Link href="/execution">Execution</Link>
           <Link href="/execution/global-teams">Global Teams</Link>
           <Link href="/affordable-housing-advisory">Affordable Housing</Link>
+          <Link href="/podcast">Podcast</Link>
         </div>
         <div>
           <h3>Contact</h3>

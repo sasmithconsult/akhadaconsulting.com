@@ -67,21 +67,17 @@ h3 {
   justify-content: space-between;
 }
 .brand {
-  position: relative;
   display: inline-flex;
   align-items: center;
-  min-width: 118px;
-  min-height: 44px;
+  gap: 10px;
+  min-height: 48px;
   font-size: 0.93rem;
   letter-spacing: 0.19em;
   font-weight: 700;
   line-height: 1.15;
 }
 .brand-wordmark {
-  transition: opacity 120ms ease;
-}
-.brand-wordmark.has-logo {
-  opacity: 0;
+  white-space: nowrap;
 }
 .brand small {
   display: block;
@@ -90,19 +86,10 @@ h3 {
   font-weight: 400;
 }
 .brand-logo {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: auto;
-  max-width: 180px;
-  height: 52px;
+  display: block;
+  width: 34px;
+  height: 40px;
   object-fit: contain;
-  object-position: left center;
-  opacity: 0;
-  transform: translateY(-50%);
-}
-.brand-logo.is-loaded {
-  opacity: 1;
 }
 .site-header nav {
   display: flex;
@@ -242,6 +229,29 @@ h3 {
   gap: 12%;
   align-items: center;
 }
+.authority-with-portrait {
+  grid-template-columns: 1.2fr 0.72fr 0.95fr;
+  gap: 6%;
+}
+.principal-portrait {
+  margin: 0;
+}
+.principal-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  filter: saturate(0.82);
+}
+.principal-portrait figcaption {
+  margin-top: 12px;
+  color: #83908b;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
 .quote {
   font-family: Georgia;
   font-size: clamp(1.9rem, 3vw, 3.1rem);
@@ -327,28 +337,24 @@ h3 {
   gap: 9%;
   align-items: center;
 }
-.podcast-art {
-  aspect-ratio: 1;
+.podcast-cover-wrap {
   max-width: 480px;
-  background: linear-gradient(140deg, #171a19, #233536);
-  border: 1px solid #3e4c49;
-  display: grid;
-  place-items: center;
-  padding: 14%;
-  text-align: center;
   box-shadow: 22px 22px 0 #0a4e53;
 }
-.podcast-art span {
+.podcast-cover {
   display: block;
-  color: #87b4ad;
-  letter-spacing: 0.3em;
-  font-size: 0.65rem;
+  width: 100%;
+  height: auto;
 }
-.podcast-art strong {
-  font-family: Georgia;
-  font-size: clamp(2rem, 4vw, 3.8rem);
-  font-weight: 400;
-  line-height: 1.05;
+.button-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 28px;
+}
+.button-row .text-link {
+  margin-top: 0;
 }
 .housing-teaser {
   background: var(--paper);
@@ -544,35 +550,41 @@ h3 {
   color: #15201e;
 }
 .light-hero {
-  color: white;
+  color: var(--ink);
   min-height: 720px;
   background:
     linear-gradient(
       90deg,
-      rgba(7, 35, 37, 0.96) 0%,
-      rgba(7, 35, 37, 0.78) 57%,
-      rgba(7, 35, 37, 0.22)
+      #eef1ef 0%,
+      rgba(238, 241, 239, 0.98) 36%,
+      rgba(238, 241, 239, 0.82) 49%,
+      rgba(238, 241, 239, 0.16) 68%,
+      transparent 100%
     ),
-    url("/images/housing-hero.jpg"), linear-gradient(135deg, #526f6e, #b5c2bd);
+    url("/images/housing-hero.jpg"), linear-gradient(135deg, #d7dedb, #8fa5a2);
   background-size: cover;
-  background-position: center;
+  background-position: center, center, center;
+}
+.light-hero .lede {
+  color: #44514d;
+  max-width: 660px;
+}
+.light-hero .eyebrow {
+  color: var(--teal);
 }
 .light-hero:after {
   content: "";
   position: absolute;
-  inset: auto 4% 0 auto;
-  width: 35%;
-  height: 70%;
-  background: linear-gradient(
-    135deg,
-    transparent 48%,
-    rgba(255, 255, 255, 0.12) 49%,
-    transparent 50%
-  );
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  height: 4px;
+  background: var(--teal);
   pointer-events: none;
 }
 .housing-page .site-header {
-  color: #fff;
+  color: var(--ink);
+  border-bottom-color: rgba(10, 78, 83, 0.2);
 }
 .housing-page .content-block {
   color: #15201e;
@@ -623,6 +635,45 @@ h3 {
 }
 .capability h3 {
   margin-bottom: 10px;
+}
+.podcast-hero {
+  min-height: 820px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 180px 32px 110px;
+  display: grid;
+  grid-template-columns: minmax(300px, 480px) 1fr;
+  gap: 10%;
+  align-items: center;
+}
+.podcast-page-art {
+  box-shadow: 26px 26px 0 var(--teal);
+}
+.podcast-page-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.podcast-page-copy h1 {
+  font-size: clamp(3.2rem, 6vw, 6rem);
+}
+.podcast-page-copy .lede {
+  margin: 32px 0 18px;
+  color: #d1d6d3;
+  font-size: 1.2rem;
+}
+.podcast-access-note {
+  margin-top: 30px;
+  color: #8e9a95;
+  font-size: 0.83rem;
+}
+.podcast-access-note a {
+  color: #8fc3c0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.podcast-themes {
+  border-top: 1px solid var(--line);
 }
 @media (max-width: 800px) {
   .site-header {
@@ -700,9 +751,6 @@ h3 {
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  .podcast-art {
-    max-width: calc(100% - 22px);
-  }
   .teaser-box {
     padding-left: 25px;
   }
@@ -742,8 +790,36 @@ h3 {
     border-top: 1px solid #466667;
     padding-left: 0;
   }
+  .authority-with-portrait {
+    grid-template-columns: 1fr;
+  }
+  .principal-portrait {
+    max-width: 320px;
+  }
+  .podcast-cover-wrap {
+    max-width: calc(100% - 22px);
+  }
+  .podcast-hero {
+    min-height: auto;
+    padding: 130px 22px 80px;
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+  .podcast-page-art {
+    max-width: calc(100% - 22px);
+  }
   .light-hero {
     min-height: 650px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(238, 241, 239, 0.98) 0%,
+        rgba(238, 241, 239, 0.92) 58%,
+        rgba(238, 241, 239, 0.35) 100%
+      ),
+      url("/images/housing-hero.jpg"), linear-gradient(135deg, #d7dedb, #8fa5a2);
+    background-size: cover;
+    background-position: center;
   }
   .legal {
     padding-top: 90px;

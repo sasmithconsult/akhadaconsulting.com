@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section authority">
+        <section className="section authority authority-with-portrait">
           <div>
             <p className="eyebrow">Experience under pressure</p>
             <h2>Advice grounded in operating reality.</h2>
@@ -85,6 +85,15 @@ export default function Home() {
               responsibility, and the systems that allow others to act well.
             </p>
           </div>
+          <figure className="principal-portrait">
+            <img
+              src="/images/scott-smith-headshot.png"
+              alt="Scott Smith, principal of Akhada Consulting"
+              width="1024"
+              height="1024"
+            />
+            <figcaption>Scott Smith · Principal</figcaption>
+          </figure>
           <blockquote className="quote">
             The goal is not to make the leader less important. It is to make the
             organization more capable.
@@ -160,13 +169,14 @@ export default function Home() {
           </div>
         </section>
         <section className="section feature-row">
-          <div className="podcast-art">
-            <span>THE PODCAST</span>
-            <strong>
-              The Stoic
-              <br />
-              Inner Strategy
-            </strong>
+          <div className="podcast-cover-wrap">
+            <img
+              className="podcast-cover"
+              src="/images/stoic-inner-strategy-cover.png"
+              alt="The Stoic Inner Strategy with Scott Smith podcast cover"
+              width="2048"
+              height="2048"
+            />
           </div>
           <div>
             <p className="eyebrow">Ideas for the internal work</p>
@@ -176,14 +186,19 @@ export default function Home() {
               decision-making, and the discipline required to lead under
               pressure.
             </p>
-            <a
-              className="button outline"
-              href="https://thestoicinnerstrategy.buzzsprout.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Listen on Buzzsprout ↗
-            </a>
+            <div className="button-row">
+              <Link className="button" href="/podcast">
+                Explore the podcast →
+              </Link>
+              <a
+                className="text-link"
+                href="https://thestoicinnerstrategy.buzzsprout.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Buzzsprout ↗
+              </a>
+            </div>
           </div>
         </section>
         <section className="section housing-teaser">
