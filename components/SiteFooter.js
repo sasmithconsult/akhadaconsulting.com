@@ -7,8 +7,7 @@ export default function SiteFooter() {
         <div>
           <Brand />
           <p>
-            Principal advisory at the intersection of judgment, leadership, and
-            execution.
+            Principal advisory for judgment, leadership, and execution.
           </p>
         </div>
         <div>
@@ -16,8 +15,9 @@ export default function SiteFooter() {
           <Link href="/advisory">Advisory</Link>
           <Link href="/execution">Execution</Link>
           <Link href="/execution/global-teams">Global Teams</Link>
-          <Link href="/affordable-housing-advisory">Affordable Housing</Link>
           <Link href="/podcast">Podcast</Link>
+          <h3>Specialist Practice</h3>
+          <Link href="/affordable-housing-advisory">Affordable Housing</Link>
         </div>
         <div>
           <h3>Contact</h3>
