@@ -2,6 +2,7 @@ export default function CTA({
   eyebrow = "A considered next step",
   title = "Build a business that does not depend on you for everything.",
   text = "A focused conversation can help clarify the pressure points, the decisions in front of you, and whether Akhada is the right partner.",
+  href = "https://calendly.com/scott8smith/founder-strategy-conversation",
 }) {
   return (
     <section className="cta section">
@@ -12,7 +13,7 @@ export default function CTA({
       </div>
       <a
         className="button light"
-        href="https://calendly.com/scott8smith/founder-strategy-conversation"
+        href={href}
         target="_blank"
         rel="noreferrer"
       >
