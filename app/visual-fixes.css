@@ -14,25 +14,22 @@
   margin-top: 1px;
 }
 
-/* Affordable housing hero: intentionally mirrors the proven light-page concept. */
+/* Affordable housing hero: match the original light-page composition. */
 .housing-hero {
   position: relative;
-  min-height: 690px;
+  min-height: 720px;
   display: flex;
   align-items: center;
   overflow: hidden;
   color: #0f172a;
   background: #f8fafc;
-  padding: 125px max(32px, calc((100vw - var(--max)) / 2)) 65px;
+  padding: 125px max(32px, calc((100vw - var(--max)) / 2)) 70px;
 }
 
 .housing-hero-image {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 36%;
-  width: 64%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
@@ -46,12 +43,12 @@
   background: linear-gradient(
     90deg,
     rgba(248, 250, 252, 1) 0%,
-    rgba(248, 250, 252, 1) 31%,
-    rgba(248, 250, 252, 0.96) 38%,
-    rgba(248, 250, 252, 0.72) 47%,
-    rgba(248, 250, 252, 0.30) 57%,
-    rgba(248, 250, 252, 0.06) 68%,
-    rgba(248, 250, 252, 0) 78%
+    rgba(248, 250, 252, 1) 30%,
+    rgba(248, 250, 252, 0.98) 40%,
+    rgba(248, 250, 252, 0.88) 52%,
+    rgba(248, 250, 252, 0.52) 66%,
+    rgba(248, 250, 252, 0.16) 82%,
+    rgba(248, 250, 252, 0) 100%
   );
 }
 
@@ -59,7 +56,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 680px;
+  max-width: 610px;
 }
 
 .housing-hero .eyebrow {
@@ -69,30 +66,30 @@
 
 .housing-hero h1 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(2.7rem, 4.5vw, 4.5rem);
+  font-size: clamp(2.55rem, 3.6vw, 3.65rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
   font-weight: 700;
-  max-width: 660px;
+  max-width: 600px;
 }
 
 .housing-hero-lede {
-  margin-top: 30px;
+  margin-top: 28px;
   color: #334155;
-  font-size: 1.18rem;
-  line-height: 1.65;
-  max-width: 650px;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  max-width: 600px;
 }
 
 .housing-hero-copy {
   color: #475569;
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 625px;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  max-width: 590px;
 }
 
 .housing-hero-cta {
-  margin-top: 14px;
+  margin-top: 16px;
   color: #fff;
 }
 
@@ -106,13 +103,6 @@
   outline: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-@media (max-width: 1000px) {
-  .housing-hero-image {
-    left: 30%;
-    width: 70%;
-  }
-}
-
 @media (max-width: 800px) {
   .housing-hero {
     min-height: auto;
@@ -121,9 +111,6 @@
   }
 
   .housing-hero-image {
-    inset: 0;
-    width: 100%;
-    height: 100%;
     object-position: 64% center;
   }
 
