@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./visual-fixes.css";
 import StructuredData from "@/components/StructuredData";
 
 export const metadata = {
@@ -10,6 +11,10 @@ export const metadata = {
   description:
     "Principal advisory for founders and executives building leadership capacity, operating clarity, and organizations that function beyond the founder.",
   alternates: { canonical: "/" },
+  icons: {
+    icon: [{ url: "/images/akhada-favicon.png", type: "image/png" }],
+    apple: "/images/akhada-favicon.png",
+  },
   openGraph: {
     type: "website",
     siteName: "Akhada Consulting",
@@ -20,6 +25,7 @@ export const metadata = {
   },
   twitter: { card: "summary_large_image" },
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

@@ -22,7 +22,7 @@ export default function Home() {
         <section className="hero">
           <div className="hero-content">
             <p className="eyebrow">
-              Principal advisory for consequential growth
+              Principal advisory for judgment, leadership, and execution.
             </p>
             <h1>
               You built a successful business. It shouldn’t still require you
@@ -74,17 +74,28 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section authority">
+        <section className="section authority authority-with-portrait">
           <div>
             <p className="eyebrow">Experience under pressure</p>
             <h2>Advice grounded in operating reality.</h2>
             <p className="muted">
-              Scott Smith brings decades of founder, executive, global-team, and
-              advisory experience to the work. Akhada’s perspective is
-              practical: leadership is demonstrated through judgment,
-              responsibility, and the systems that allow others to act well.
+              Scott Smith has spent 28 years building, leading, and advising
+              organizations, including building teams across the U.S. and India
+              and operating through periods of rapid growth, M&A, and
+              organizational change. Akhada’s perspective is practical:
+              leadership is demonstrated through judgment, responsibility, and
+              the systems that allow others to act well.
             </p>
           </div>
+          <figure className="principal-portrait">
+            <img
+              src="/images/scott-smith-headshot.png"
+              alt="Scott Smith, Principal Advisor at Akhada Consulting"
+              width="1024"
+              height="1024"
+            />
+            <figcaption>Scott Smith · Principal Advisor</figcaption>
+          </figure>
           <blockquote className="quote">
             The goal is not to make the leader less important. It is to make the
             organization more capable.
@@ -104,8 +115,9 @@ export default function Home() {
               <span className="card-num">01 / ADVISORY</span>
               <h3>Leadership &amp; Management Advisory</h3>
               <p>
-                Sharper judgment, stronger ownership, and management capacity
-                for organizations that have outgrown founder-led coordination.
+                Clarify the decisions that matter, who has the right to make
+                them, and how leaders exercise judgment when the answer is not
+                obvious.
               </p>
               <span className="text-link">Explore advisory →</span>
             </Link>
@@ -113,8 +125,8 @@ export default function Home() {
               <span className="card-num">02 / EXECUTION</span>
               <h3>Operating Clarity &amp; Execution</h3>
               <p>
-                Clarify decisions, responsibilities, handoffs, and management
-                rhythms so priorities reliably become outcomes.
+                Turn priorities into operating reality through clearer handoffs,
+                management cadence, meeting structure, and follow-through.
               </p>
               <span className="text-link">Explore execution →</span>
             </Link>
@@ -122,8 +134,9 @@ export default function Home() {
               <span className="card-num">03 / GLOBAL TEAMS</span>
               <h3>Global Teams</h3>
               <p>
-                Make offshore and outsourced capacity serve a clear
-                strategy—with authority and accountability designed first.
+                Design offshore and outsourced work so authority travels with
+                responsibility—without creating another layer of dependency
+                back on the founder.
               </p>
               <span className="text-link">Explore global teams →</span>
             </Link>
@@ -160,13 +173,14 @@ export default function Home() {
           </div>
         </section>
         <section className="section feature-row">
-          <div className="podcast-art">
-            <span>THE PODCAST</span>
-            <strong>
-              The Stoic
-              <br />
-              Inner Strategy
-            </strong>
+          <div className="podcast-cover-wrap">
+            <img
+              className="podcast-cover"
+              src="/images/stoic-inner-strategy-cover.png"
+              alt="The Stoic Inner Strategy with Scott Smith podcast cover"
+              width="2048"
+              height="2048"
+            />
           </div>
           <div>
             <p className="eyebrow">Ideas for the internal work</p>
@@ -176,31 +190,25 @@ export default function Home() {
               decision-making, and the discipline required to lead under
               pressure.
             </p>
-            <a
-              className="button outline"
-              href="https://thestoicinnerstrategy.buzzsprout.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Listen on Buzzsprout ↗
-            </a>
+            <div className="button-row">
+              <Link className="button" href="/podcast">
+                Explore the podcast →
+              </Link>
+              <a
+                className="text-link"
+                href="https://thestoicinnerstrategy.buzzsprout.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Buzzsprout ↗
+              </a>
+            </div>
           </div>
         </section>
-        <section className="section housing-teaser">
-          <div className="teaser-box">
-            <p className="eyebrow">Specialist practice</p>
-            <h2>Affordable Housing &amp; Public Funding Advisory</h2>
-            <p>
-              A focused practice helping developers, organizations, and public
-              partners navigate government, clarify funding paths, structure
-              partnerships, and advance affordable housing.
-            </p>
-            <Link className="button" href="/affordable-housing-advisory">
-              Explore the practice →
-            </Link>
-          </div>
-        </section>
-        <CTA />
+        <CTA
+          title="Turn founder-led coordination into a management system that can carry the next stage of growth."
+          text="If decisions still converge on you, a focused conversation can surface where judgment, ownership, or operating structure is breaking down—and what to change first."
+        />
       </main>
       <SiteFooter />
     </>

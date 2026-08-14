@@ -77,7 +77,7 @@ export default function Execution() {
               </p>
             </div>
             <div className="service-item">
-              <h3>Workflows &amp; useful SOPs</h3>
+              <h3>Workflows &amp; SOPs</h3>
               <p>
                 Document repeatable work where consistency creates value—without
                 turning judgment into bureaucracy.

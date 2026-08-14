@@ -8,13 +8,15 @@ const links = [
   ["Execution", "/execution"],
   ["Global Teams", "/execution/global-teams"],
   ["Affordable Housing", "/affordable-housing-advisory"],
+  ["Podcast", "/podcast"],
 ];
+
 export default function SiteHeader({ light = false }) {
   const [open, setOpen] = useState(false);
   return (
     <header className={`site-header ${light ? "header-light" : ""}`}>
       <div className="nav-wrap">
-        <Brand />
+        <Brand light={light} />
         <button
           className="menu"
           onClick={() => setOpen(!open)}

@@ -1,24 +1,16 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
 
-export default function Brand() {
-  const [logoAvailable, setLogoAvailable] = useState(false);
+export default function Brand({ light = false }) {
+  const markSrc = light
+    ? "/images/akhada-mark-dark.png"
+    : "/images/akhada-mark-light.png";
 
   return (
     <Link className="brand" href="/" aria-label="Akhada Consulting home">
-      <img
-        className={`brand-logo ${logoAvailable ? "is-loaded" : ""}`}
-        src="/images/akhada-logo.png"
-        alt=""
-        onLoad={() => setLogoAvailable(true)}
-        onError={() => setLogoAvailable(false)}
-      />
-      <span
-        className={`brand-wordmark ${logoAvailable ? "has-logo" : ""}`}
-        aria-hidden="true"
-      >
+      <span className="brand-mark" aria-hidden="true">
+        <img src={markSrc} alt="" width="325" height="385" />
+      </span>
+      <span className="brand-wordmark">
         AKHADA <small>CONSULTING</small>
       </span>
     </Link>

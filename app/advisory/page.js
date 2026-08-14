@@ -23,8 +23,8 @@ export default function Advisory() {
       >
         <p>
           Principal advisory for founders and executives navigating
-          consequential decisions, leadership strain, and organizations that
-          still depend too heavily on them.
+          consequential decisions, leadership strain, and businesses that still
+          run too heavily through them.
         </p>
       </PageHero>
       <main>
@@ -76,17 +76,17 @@ export default function Advisory() {
               </p>
             </div>
             <div className="service-item">
-              <h3>Management capacity</h3>
+              <h3>Management judgment</h3>
               <p>
-                Strengthen the managers, expectations, and operating
-                conversations that convert leadership intent into consistent
-                action.
+                Develop managers who can frame problems, make sound calls within
+                their authority, and recognize when an issue truly requires
+                escalation.
               </p>
             </div>
           </div>
         </section>
         <section className="content-block split">
-          <h2>Strategic clarity before prescription.</h2>
+          <h2>Advisory shaped around the decision in front of you.</h2>
           <div>
             <p className="section-intro">
               Engagements are shaped around the real issue. That may mean a
@@ -99,12 +99,15 @@ export default function Advisory() {
               .
             </p>
             <p className="muted">
-              The purpose is not dependence on an advisor. It is better judgment
-              and stronger institutional capacity.
+              Good advisory work should improve the quality and distribution of
+              judgment inside the organization long after the conversation ends.
             </p>
           </div>
         </section>
-        <CTA title="Create more capable leadership—not more reliance on the founder." />
+        <CTA
+          title="Strengthen the judgment behind the decisions your business now demands."
+          text="When the issue is not obvious, a focused advisory conversation can clarify the decision, the leadership constraint, and the next move."
+        />
       </main>
       <SiteFooter />
     </>

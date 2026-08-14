@@ -1,13 +1,10 @@
-# Akhada image assets
+# Akhada production image assets
 
-## Brand logo
+The production site expects the following approved assets to be added manually at these exact paths after the code-only pull request is applied:
 
-Add the approved Akhada Consulting logo as `akhada-logo.png`. The shared brand component automatically displays the image when it loads successfully and otherwise presents a clean text-only `AKHADA / CONSULTING` wordmark. No substitute logo mark is generated.
+- `public/images/akhada-logo.png` — transparent Akhada mark used alongside the text wordmark in the shared header and footer.
+- `public/images/scott-smith-headshot.png` — approved Scott Smith headshot used in the homepage authority section.
+- `public/images/housing-hero.jpg` — supplied multifamily building image used on the Affordable Housing & Public Funding Advisory hero.
+- `public/images/stoic-inner-strategy-cover.png` — supplied teal podcast artwork used on the homepage and podcast page.
 
-Use a transparent PNG with sufficient resolution for a rendered height of approximately 52 pixels.
-
-## Affordable housing hero
-
-Add a licensed, optimized multifamily or affordable-housing development photograph as `housing-hero.jpg` (recommended: 2000 × 1200 pixels and under 400 KB). The housing hero references this local path directly and includes an architectural CSS fallback, so it remains fully usable when the optional file is absent.
-
-Do not add remote Postimg or Hostinger-hosted assets. Do not add portraits unless they are approved photographs supplied by the person depicted.
+Only the original, approved files supplied by Akhada Consulting should be installed at these paths. Do not replace them with generated imagery or remote Postimg or Hostinger-hosted assets.

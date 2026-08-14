@@ -6,6 +6,7 @@ export default function sitemap() {
     "/execution",
     "/execution/global-teams",
     "/affordable-housing-advisory",
+    "/podcast",
     "/privacy-policy",
     "/terms-of-service",
   ].map((path) => ({
