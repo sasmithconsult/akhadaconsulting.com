@@ -8,6 +8,7 @@ export default function sitemap() {
     "/execution/global-teams/dedicated-operator",
     "/affordable-housing-advisory",
     "/podcast",
+    "/contact",
     "/privacy-policy",
     "/terms-of-service",
   ].map((path) => ({
