@@ -1,7 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./contact.module.css";
 
 const calendlyByType = {
@@ -20,20 +19,28 @@ const calendlyByType = {
 };
 
 export default function ContactForm() {
-  const searchParams = useSearchParams();
-  const initialType = searchParams.get("type") || "";
-  const source = searchParams.get("source") || "website-contact";
-
+  const [source, setSource] = useState("website-contact");
   const [form, setForm] = useState({
     name: "",
     email: "",
     company: "",
-    inquiryType: initialType,
+    inquiryType: "",
     message: "",
     website: "",
   });
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState("");
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type") || "";
+    const incomingSource = params.get("source") || "website-contact";
+
+    setSource(incomingSource);
+    if (["advisory", "operator", "housing", "other"].includes(type)) {
+      setForm((current) => ({ ...current, inquiryType: type }));
+    }
+  }, []);
 
   const nextStep = useMemo(
     () => calendlyByType[form.inquiryType] || null,
