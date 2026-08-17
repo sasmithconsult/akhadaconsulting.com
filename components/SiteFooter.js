@@ -21,6 +21,7 @@ export default function SiteFooter() {
         </div>
         <div>
           <h3>Contact</h3>
+          <Link href="/contact">Contact Akhada</Link>
           <a href="mailto:scott.smith@akhadaconsulting.com">
             scott.smith@akhadaconsulting.com
           </a>
