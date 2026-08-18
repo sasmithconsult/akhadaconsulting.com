@@ -9,6 +9,7 @@ const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
 const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit`;
 
+// Preview redeploy marker: Resend environment variables added 2026-08-17.
 function base64url(value) {
   return Buffer.from(value)
     .toString("base64")
@@ -57,7 +58,7 @@ async function getGoogleAccessToken() {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      grant_type: "urn:ietf:params:oauth-grant-type:jwt-bearer",
       assertion,
     }),
     cache: "no-store",
