@@ -9,7 +9,6 @@ const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
 const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit`;
 
-// Preview redeploy marker: Resend environment variables added 2026-08-17.
 function base64url(value) {
   return Buffer.from(value)
     .toString("base64")
@@ -80,6 +79,15 @@ function clean(value, max = 5000) {
     .slice(0, max);
 }
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 function inquiryLabel(value) {
   return (
     {
@@ -89,6 +97,54 @@ function inquiryLabel(value) {
       other: "Something Else",
     }[value] || "Something Else"
   );
+}
+
+function emailShell(content) {
+  return `
+    <div style="margin:0;padding:0;background:#f4f2ec;">
+      <div style="max-width:640px;margin:0 auto;padding:36px 20px;font-family:Arial,Helvetica,sans-serif;color:#102126;">
+        <div style="background:#0d191c;padding:22px 28px;border-top:4px solid #118b91;">
+          <div style="font-family:Georgia,'Times New Roman',serif;font-size:20px;letter-spacing:.02em;color:#ffffff;">AKHADA <span style="color:#36b6bd;">CONSULTING</span></div>
+        </div>
+        <div style="background:#ffffff;padding:32px 28px;border:1px solid #e4e0d7;border-top:none;">
+          ${content}
+        </div>
+        <div style="padding:18px 8px 0;color:#6c7779;font-size:12px;line-height:1.5;">
+          Akhada Consulting &nbsp;·&nbsp; <a href="https://akhadaconsulting.com" style="color:#0f6f75;text-decoration:none;">akhadaconsulting.com</a>
+        </div>
+      </div>
+    </div>`;
+}
+
+function acknowledgementHtml(name) {
+  return emailShell(`
+    <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#118b91;font-weight:700;margin-bottom:14px;">Message received</div>
+    <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:34px;line-height:1.15;font-weight:400;margin:0 0 24px;color:#102126;">Thank you.</h1>
+    <p style="font-size:16px;line-height:1.7;margin:0 0 18px;">Hi ${escapeHtml(name)},</p>
+    <p style="font-size:16px;line-height:1.7;margin:0 0 18px;">Thanks for reaching out to Akhada Consulting. Your note has been received, and I will review it personally.</p>
+    <p style="font-size:16px;line-height:1.7;margin:0 0 28px;">If the conversation is a fit, I will respond directly with the most useful next step.</p>
+    <div style="border-top:1px solid #d9dfdf;padding-top:20px;font-size:15px;line-height:1.6;">
+      <strong>Scott Smith</strong><br>
+      Akhada Consulting<br>
+      <a href="mailto:scott.smith@akhadaconsulting.com" style="color:#0f6f75;text-decoration:none;">scott.smith@akhadaconsulting.com</a>
+    </div>`);
+}
+
+function ownerNotificationHtml({ submitted, name, email, company, label, source, message }) {
+  const safeMessage = escapeHtml(message).replace(/\n/g, "<br>");
+  return emailShell(`
+    <div style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#118b91;font-weight:700;margin-bottom:12px;">New website inquiry</div>
+    <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:30px;line-height:1.2;font-weight:400;margin:0 0 24px;color:#102126;">${escapeHtml(label)}</h1>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;font-size:14px;line-height:1.55;margin-bottom:24px;">
+      <tr><td style="padding:7px 0;color:#6c7779;width:120px;">Submitted</td><td style="padding:7px 0;">${escapeHtml(submitted)}</td></tr>
+      <tr><td style="padding:7px 0;color:#6c7779;">Name</td><td style="padding:7px 0;"><strong>${escapeHtml(name)}</strong></td></tr>
+      <tr><td style="padding:7px 0;color:#6c7779;">Email</td><td style="padding:7px 0;"><a href="mailto:${escapeHtml(email)}" style="color:#0f6f75;text-decoration:none;">${escapeHtml(email)}</a></td></tr>
+      <tr><td style="padding:7px 0;color:#6c7779;">Company</td><td style="padding:7px 0;">${escapeHtml(company || "Not provided")}</td></tr>
+      <tr><td style="padding:7px 0;color:#6c7779;">Source</td><td style="padding:7px 0;">${escapeHtml(source)}</td></tr>
+    </table>
+    <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6c7779;font-weight:700;margin-bottom:8px;">Message</div>
+    <div style="background:#f5f8f8;border-left:3px solid #118b91;padding:18px 20px;font-size:15px;line-height:1.65;margin-bottom:26px;">${safeMessage}</div>
+    <a href="${SHEET_URL}" style="display:inline-block;background:#0f656b;color:#ffffff;text-decoration:none;padding:12px 18px;font-size:13px;font-weight:700;letter-spacing:.04em;">OPEN LEAD LOG</a>`);
 }
 
 async function appendLead(values) {
@@ -113,7 +169,7 @@ async function appendLead(values) {
   }
 }
 
-async function sendEmail({ to, subject, text, replyTo }) {
+async function sendEmail({ to, subject, text, html, replyTo }) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_EMAIL_FROM;
 
@@ -134,6 +190,7 @@ async function sendEmail({ to, subject, text, replyTo }) {
       to,
       subject,
       text,
+      html,
       ...(replyTo ? { reply_to: replyTo } : {}),
     }),
     cache: "no-store",
@@ -145,18 +202,9 @@ async function sendEmail({ to, subject, text, replyTo }) {
   }
 }
 
-async function sendContactEmails({
-  submitted,
-  name,
-  email,
-  company,
-  inquiryType,
-  message,
-  source,
-}) {
+async function sendContactEmails({ submitted, name, email, company, inquiryType, message, source }) {
   const label = inquiryLabel(inquiryType);
-  const notificationTo =
-    process.env.CONTACT_NOTIFICATION_TO || "scott.smith@akhadaconsulting.com";
+  const notificationTo = process.env.CONTACT_NOTIFICATION_TO || "scott.smith@akhadaconsulting.com";
 
   const ownerText = [
     `New Akhada website inquiry: ${label}`,
@@ -191,12 +239,14 @@ async function sendContactEmails({
       to: notificationTo,
       subject: `New Akhada Inquiry: ${label} — ${name}`,
       text: ownerText,
+      html: ownerNotificationHtml({ submitted, name, email, company, label, source, message }),
       replyTo: email,
     }),
     sendEmail({
       to: email,
       subject: "Your note to Akhada Consulting",
       text: acknowledgementText,
+      html: acknowledgementHtml(name),
       replyTo: "scott.smith@akhadaconsulting.com",
     }),
   ]);
@@ -224,17 +274,11 @@ export async function POST(request) {
     const source = clean(body.source || "website-contact", 120);
 
     if (!name || !email || !inquiryType || !message) {
-      return NextResponse.json(
-        { error: "Please complete the required fields." },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Please complete the required fields." }, { status: 400 });
     }
 
     if (!/^\S+@\S+\.\S+$/.test(email)) {
-      return NextResponse.json(
-        { error: "Please enter a valid email address." },
-        { status: 400 },
-      );
+      return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
     }
 
     const submitted = new Intl.DateTimeFormat("en-US", {
@@ -260,24 +304,13 @@ export async function POST(request) {
       "",
     ]);
 
-    await sendContactEmails({
-      submitted,
-      name,
-      email,
-      company,
-      inquiryType,
-      message,
-      source,
-    });
+    await sendContactEmails({ submitted, name, email, company, inquiryType, message, source });
 
     return NextResponse.json({ ok: true });
   } catch (error) {
     console.error("Contact form error:", error);
     return NextResponse.json(
-      {
-        error:
-          "We could not send your note just now. Please email scott.smith@akhadaconsulting.com directly.",
-      },
+      { error: "We could not send your note just now. Please email scott.smith@akhadaconsulting.com directly." },
       { status: 500 },
     );
   }
