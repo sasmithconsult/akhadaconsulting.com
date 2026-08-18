@@ -1,13 +1,13 @@
 import crypto from "node:crypto";
 import { NextResponse } from "next/server";
 
-// Contact submissions are written server-side so Google credentials never reach the browser.
 const SHEET_ID =
   process.env.GOOGLE_SHEETS_ID ||
   "1T6bNrswKYcwCIkpIBrJSMKyVcD_9RB09q17YmMl1dGY";
 const SHEET_RANGE = process.env.GOOGLE_SHEETS_RANGE || "Leads!A:I";
 const TOKEN_URL = "https://oauth2.googleapis.com/token";
 const SCOPE = "https://www.googleapis.com/auth/spreadsheets";
+const SHEET_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/edit`;
 
 function base64url(value) {
   return Buffer.from(value)
@@ -112,11 +112,105 @@ async function appendLead(values) {
   }
 }
 
+async function sendEmail({ to, subject, text, replyTo }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  const from = process.env.CONTACT_EMAIL_FROM;
+
+  if (!apiKey || !from) {
+    console.warn("Email notification skipped: Resend is not configured.");
+    return;
+  }
+
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+      "User-Agent": "AkhadaConsulting/1.0",
+    },
+    body: JSON.stringify({
+      from,
+      to,
+      subject,
+      text,
+      ...(replyTo ? { reply_to: replyTo } : {}),
+    }),
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error(`Resend email failed: ${detail}`);
+  }
+}
+
+async function sendContactEmails({
+  submitted,
+  name,
+  email,
+  company,
+  inquiryType,
+  message,
+  source,
+}) {
+  const label = inquiryLabel(inquiryType);
+  const notificationTo =
+    process.env.CONTACT_NOTIFICATION_TO || "scott.smith@akhadaconsulting.com";
+
+  const ownerText = [
+    `New Akhada website inquiry: ${label}`,
+    "",
+    `Submitted: ${submitted}`,
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `Company: ${company || "Not provided"}`,
+    `Inquiry type: ${label}`,
+    `Source: ${source}`,
+    "",
+    "Message:",
+    message,
+    "",
+    `Lead log: ${SHEET_URL}`,
+  ].join("\n");
+
+  const acknowledgementText = [
+    `Hi ${name},`,
+    "",
+    "Thanks for reaching out to Akhada Consulting. Your note has been received, and I will review it personally.",
+    "",
+    "If the conversation is a fit, I will respond directly with the most useful next step.",
+    "",
+    "Scott Smith",
+    "Akhada Consulting",
+    "scott.smith@akhadaconsulting.com",
+  ].join("\n");
+
+  const results = await Promise.allSettled([
+    sendEmail({
+      to: notificationTo,
+      subject: `New Akhada Inquiry: ${label} — ${name}`,
+      text: ownerText,
+      replyTo: email,
+    }),
+    sendEmail({
+      to: email,
+      subject: "Your note to Akhada Consulting",
+      text: acknowledgementText,
+      replyTo: "scott.smith@akhadaconsulting.com",
+    }),
+  ]);
+
+  for (const result of results) {
+    if (result.status === "rejected") {
+      console.error("Contact email error:", result.reason);
+    }
+  }
+}
+
 export async function POST(request) {
   try {
     const body = await request.json();
 
-    // Honeypot field. Return success so bots do not learn the filter.
     if (clean(body.website, 200)) {
       return NextResponse.json({ ok: true });
     }
@@ -164,6 +258,16 @@ export async function POST(request) {
       "New",
       "",
     ]);
+
+    await sendContactEmails({
+      submitted,
+      name,
+      email,
+      company,
+      inquiryType,
+      message,
+      source,
+    });
 
     return NextResponse.json({ ok: true });
   } catch (error) {
