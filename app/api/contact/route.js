@@ -1,6 +1,7 @@
 import crypto from "node:crypto";
 import { NextResponse } from "next/server";
 
+// Contact submissions are written server-side so Google credentials never reach the browser.
 const SHEET_ID =
   process.env.GOOGLE_SHEETS_ID ||
   "1T6bNrswKYcwCIkpIBrJSMKyVcD_9RB09q17YmMl1dGY";
