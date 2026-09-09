@@ -3,6 +3,7 @@ export default function sitemap() {
   return [
     "",
     "/advisory",
+    "/reducing-founder-dependency",
     "/execution",
     "/execution/global-teams",
     "/execution/global-teams/dedicated-operator",

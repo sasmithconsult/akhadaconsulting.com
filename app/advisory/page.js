@@ -74,6 +74,9 @@ export default function Advisory() {
                 then build the confidence and structure required to distribute
                 judgment.
               </p>
+              <Link className="text-link" href="/reducing-founder-dependency">
+                Explore founder dependency →
+              </Link>
             </div>
             <div className="service-item">
               <h3>Management judgment</h3>
