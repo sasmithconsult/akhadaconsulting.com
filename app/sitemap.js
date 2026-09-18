@@ -1,6 +1,6 @@
 export default function sitemap() {
   const base = "https://akhadaconsulting.com";
-  return [
+  const paths = [
     "",
     "/advisory",
     "/reducing-founder-dependency",
@@ -9,14 +9,13 @@ export default function sitemap() {
     "/execution/global-teams/dedicated-operator",
     "/affordable-housing-advisory",
     "/podcast",
+    "/scott-smith",
     "/contact",
     "/privacy-policy",
     "/terms-of-service",
-  ].map((path) => ({
+  ];
+
+  return paths.map((path) => ({
     url: `${base}${path}`,
-    lastModified: new Date(),
-    changeFrequency:
-      path.includes("policy") || path.includes("terms") ? "yearly" : "monthly",
-    priority: path === "" ? 1 : 0.8,
   }));
 }
