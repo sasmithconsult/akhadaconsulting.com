@@ -390,7 +390,10 @@ export default function ReducingFounderDependency() {
                 Possibly, but hiring a COO before understanding the operating
                 problem can create an expensive new layer of dependency. The
                 role should be designed around the work and decisions the
-                business actually needs someone to own.
+                business actually needs someone to own. Read{" "}
+                <Link className="text-link inline-link" href="/when-to-hire-a-coo">
+                  When Should a Founder-Led Company Hire a COO?
+                </Link>
               </p>
             </article>
             <article>
