@@ -7,6 +7,7 @@ export default function sitemap() {
     "/when-to-hire-a-coo",
     "/execution",
     "/execution/global-teams",
+    "/why-offshore-teams-fail",
     "/execution/global-teams/dedicated-operator",
     "/affordable-housing-advisory",
     "/podcast",
