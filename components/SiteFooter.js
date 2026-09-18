@@ -1,14 +1,13 @@
 import Link from "next/link";
 import Brand from "./Brand";
+
 export default function SiteFooter() {
   return (
     <footer className="footer">
       <div className="footer-grid">
         <div>
           <Brand />
-          <p>
-            Principal advisory for judgment, leadership, and execution.
-          </p>
+          <p>Principal advisory for judgment, leadership, and execution.</p>
         </div>
         <div>
           <h3>Explore</h3>
@@ -16,6 +15,7 @@ export default function SiteFooter() {
           <Link href="/execution">Execution</Link>
           <Link href="/execution/global-teams">Global Teams</Link>
           <Link href="/podcast">Podcast</Link>
+          <Link href="/scott-smith">About Scott</Link>
           <h3>Specialist Practice</h3>
           <Link href="/affordable-housing-advisory">Affordable Housing</Link>
         </div>
