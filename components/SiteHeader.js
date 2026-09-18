@@ -9,6 +9,7 @@ const links = [
   ["Global Teams", "/execution/global-teams"],
   ["Affordable Housing", "/affordable-housing-advisory"],
   ["Podcast", "/podcast"],
+  ["About", "/scott-smith"],
 ];
 
 export default function SiteHeader({ light = false }) {
