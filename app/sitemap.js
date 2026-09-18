@@ -4,6 +4,7 @@ export default function sitemap() {
     "",
     "/advisory",
     "/reducing-founder-dependency",
+    "/when-to-hire-a-coo",
     "/execution",
     "/execution/global-teams",
     "/execution/global-teams/dedicated-operator",
