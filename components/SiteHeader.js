@@ -7,6 +7,7 @@ const links = [
   ["Advisory", "/advisory"],
   ["Execution", "/execution"],
   ["Global Teams", "/execution/global-teams"],
+  ["Insights", "/insights"],
   ["Affordable Housing", "/affordable-housing-advisory"],
   ["Podcast", "/podcast"],
   ["About", "/scott-smith"],
