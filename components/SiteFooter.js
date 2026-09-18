@@ -7,14 +7,16 @@ export default function SiteFooter() {
       <div className="footer-grid">
         <div>
           <Brand />
-          <p>Principal advisory for judgment, leadership, and execution.</p>
+          <p>Principal advisory for the management problems created by growth.</p>
         </div>
         <div>
           <h3>Explore</h3>
           <Link href="/advisory">Advisory</Link>
-          <Link href="/execution">Execution</Link>
-          <Link href="/execution/global-teams">Global Teams</Link>
           <Link href="/insights">Insights</Link>
+          <h3>How We Help</h3>
+          <Link href="/advisory">Leadership &amp; Management</Link>
+          <Link href="/execution">Execution &amp; Operating Clarity</Link>
+          <Link href="/execution/global-teams">Global Teams &amp; Capacity</Link>
           <Link href="/podcast">Podcast</Link>
           <Link href="/scott-smith">About Scott</Link>
           <h3>Specialist Practice</h3>
