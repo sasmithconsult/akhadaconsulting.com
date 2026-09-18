@@ -44,6 +44,11 @@ export default function GlobalTeams() {
               Design the work and management system first. Then choose the
               capacity that serves it.
             </p>
+            <p style={{ marginTop: 32 }}>
+              <Link className="text-link" href="/why-offshore-teams-fail">
+                Why offshore teams fail even when the people are capable →
+              </Link>
+            </p>
           </div>
         </section>
         <section className="content-block light-section">
