@@ -3,6 +3,7 @@ export default function sitemap() {
   const paths = [
     "",
     "/advisory",
+    "/insights",
     "/reducing-founder-dependency",
     "/when-to-hire-a-coo",
     "/execution",
