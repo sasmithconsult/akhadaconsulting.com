@@ -18,6 +18,13 @@ export const metadata = {
 
 const insights = [
   {
+    category: "Management Judgment",
+    title: "Why Managers Keep Bringing Decisions Back to the Founder",
+    description:
+      "Why capable managers keep escalating decisions, and how clearer authority, context, review, and coaching develop sound judgment.",
+    href: "/why-managers-escalate-decisions",
+  },
+  {
     category: "Founder Dependency",
     title: "How to Reduce Founder Dependency",
     description:

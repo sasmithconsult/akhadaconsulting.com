@@ -137,6 +137,12 @@ export default function WhyOffshoreTeamsFail() {
                 must wait for permission, access, information, or approval at
                 every meaningful step.
               </p>
+              <Link
+                className="text-link"
+                href="/why-managers-escalate-decisions"
+              >
+                Explore decision escalation →
+              </Link>
             </div>
             <div className="service-item">
               <h3>Handoffs rely on memory</h3>

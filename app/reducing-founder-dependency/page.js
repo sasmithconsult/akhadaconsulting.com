@@ -123,6 +123,16 @@ export default function ReducingFounderDependency() {
               picture. Even when you are not doing the work yourself, you are
               still coordinating, clarifying, correcting, and keeping it moving.
             </p>
+            <p>
+              When this pattern repeats, examine{" "}
+              <Link
+                className="text-link inline-link"
+                href="/why-managers-escalate-decisions"
+              >
+                why managers keep bringing decisions back to the founder
+              </Link>
+              .
+            </p>
             <p className="principle" style={{ marginTop: 48 }}>
               You are no longer contributing only where your judgment matters
               most. You are compensating for gaps the organization has not

@@ -85,6 +85,12 @@ export default function Advisory() {
                 their authority, and recognize when an issue truly requires
                 escalation.
               </p>
+              <Link
+                className="text-link"
+                href="/why-managers-escalate-decisions"
+              >
+                Explore management judgment →
+              </Link>
             </div>
           </div>
         </section>

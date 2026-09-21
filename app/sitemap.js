@@ -5,6 +5,7 @@ export default function sitemap() {
     "/advisory",
     "/insights",
     "/reducing-founder-dependency",
+    "/why-managers-escalate-decisions",
     "/when-to-hire-a-coo",
     "/execution",
     "/execution/global-teams",

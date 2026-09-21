@@ -68,6 +68,12 @@ export default function Execution() {
                 Define which decisions exist, who makes them, what inputs
                 matter, and when escalation is appropriate.
               </p>
+              <Link
+                className="text-link"
+                href="/why-managers-escalate-decisions"
+              >
+                Explore decision escalation →
+              </Link>
             </div>
             <div className="service-item">
               <h3>Ownership &amp; handoffs</h3>

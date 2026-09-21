@@ -286,6 +286,13 @@ export default function WhenToHireACoo() {
               >
                 How to Reduce Founder Dependency
               </Link>
+              . To examine the management pattern more closely, read{" "}
+              <Link
+                className="text-link inline-link"
+                href="/why-managers-escalate-decisions"
+              >
+                Why Managers Keep Bringing Decisions Back to the Founder
+              </Link>
               .
             </p>
           </div>
