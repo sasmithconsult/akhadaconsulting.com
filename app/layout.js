@@ -1,6 +1,7 @@
 import "./globals.css";
 import "./visual-fixes.css";
 import StructuredData from "@/components/StructuredData";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   metadataBase: new URL("https://akhadaconsulting.com"),
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <StructuredData />
+        <Analytics />
       </body>
     </html>
   );
