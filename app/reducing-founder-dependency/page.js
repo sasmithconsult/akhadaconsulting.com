@@ -190,7 +190,15 @@ export default function ReducingFounderDependency() {
                   <strong>Hiring more people.</strong> Additional people increase
                   production capacity, but they also create onboarding,
                   coordination, communication, and management work. More people
-                  do not solve unclear ownership.
+                  do not solve unclear ownership. Before hiring, identify whether
+                  capacity is the actual constraint in{" "}
+                  <Link
+                    className="text-link inline-link"
+                    href="/how-to-find-the-real-constraint"
+                  >
+                    How to Find the Real Constraint in a Growing Company
+                  </Link>
+                  .
                 </p>
               </div>
               <div>
