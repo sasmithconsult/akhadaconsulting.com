@@ -6,7 +6,7 @@ import CTA from "@/components/CTA";
 export const metadata = {
   title: "Insights for Founder-Led Companies",
   description:
-    "Practical guidance from Akhada Consulting on founder dependency, executive leadership, operating capacity, and global-team performance.",
+    "Practical guidance from Akhada Consulting on operating diagnosis, founder dependency, executive leadership, operating capacity, and global-team performance.",
   alternates: { canonical: "/insights" },
   openGraph: {
     url: "https://akhadaconsulting.com/insights",
@@ -17,6 +17,13 @@ export const metadata = {
 };
 
 const insights = [
+  {
+    category: "Operating Diagnosis",
+    title: "How to Find the Real Constraint in a Growing Company",
+    description:
+      "How to distinguish a capacity problem from unclear ownership, limited authority, weak management judgment, broken operating flow, or founder-dependent capability.",
+    href: "/how-to-find-the-real-constraint",
+  },
   {
     category: "Management Judgment",
     title: "Why Managers Keep Bringing Decisions Back to the Founder",
