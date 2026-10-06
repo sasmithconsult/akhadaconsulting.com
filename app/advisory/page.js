@@ -42,6 +42,14 @@ export default function Advisory() {
               avoided decisions, weak ownership, or management that has not
               matured with the business.
             </p>
+            <p>
+              The guide{" "}
+              <Link className="text-link inline-link" href="/how-to-find-the-real-constraint">
+                How to Find the Real Constraint in a Growing Company
+              </Link>{" "}
+              explains how to separate the visible symptom from the operating
+              condition that is actually limiting progress.
+            </p>
             <p className="principle">
               Akhada helps leaders see the system clearly enough to act with
               precision.
