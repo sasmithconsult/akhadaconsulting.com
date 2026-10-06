@@ -101,6 +101,16 @@ export default function WhenToHireACoo() {
               Giving an undefined problem an executive title does not make the
               problem more defined.
             </p>
+            <p>
+              If the problem is still difficult to name, begin with{" "}
+              <Link
+                className="text-link inline-link"
+                href="/how-to-find-the-real-constraint"
+              >
+                How to Find the Real Constraint in a Growing Company
+              </Link>
+              .
+            </p>
             <p className="principle" style={{ marginTop: 48 }}>
               A COO should own an operating mandate, not inherit the founder&apos;s
               accumulated frustration.
