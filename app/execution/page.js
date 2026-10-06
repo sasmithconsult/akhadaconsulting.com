@@ -39,6 +39,13 @@ export default function Execution() {
               ambiguous. Teams compensate with meetings, escalation, heroic
               effort, and new tools—while the underlying friction remains.
             </p>
+            <p>
+              Before adding another person, platform, or process, use{" "}
+              <Link className="text-link inline-link" href="/how-to-find-the-real-constraint">
+                How to Find the Real Constraint in a Growing Company
+              </Link>{" "}
+              to identify where progress is actually stopping.
+            </p>
             <div className="problem-list">
               <div>
                 <span>01</span>Priorities lack a clearly accountable owner.
