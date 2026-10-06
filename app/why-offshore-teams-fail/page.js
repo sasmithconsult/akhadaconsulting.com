@@ -103,6 +103,17 @@ export default function WhyOffshoreTeamsFail() {
               interrupt, observe, and quietly fill the gaps. Distance makes those
               gaps visible.
             </p>
+            <p>
+              Before treating talent as the problem, use{" "}
+              <Link
+                className="text-link inline-link"
+                href="/how-to-find-the-real-constraint"
+              >
+                How to Find the Real Constraint in a Growing Company
+              </Link>{" "}
+              to test whether capacity, ownership, authority, operating flow, or
+              transferability is actually limiting the work.
+            </p>
             <p className="principle" style={{ marginTop: 48 }}>
               Offshore work does not create ambiguity. It exposes the ambiguity
               the organization was already carrying.
