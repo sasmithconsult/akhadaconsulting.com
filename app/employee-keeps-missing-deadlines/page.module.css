@@ -1,0 +1,12 @@
+.article { max-width: 850px; margin: 0 auto; padding: 64px 32px 96px; }
+.article h2 { margin: 56px 0 24px; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.2; }
+.article p, .article li { line-height: 1.85; }
+.article p { margin: 0 0 24px; }
+.article ol { padding-left: 28px; margin: 24px 0; }
+.article li { padding-left: 6px; margin-bottom: 12px; }
+.article blockquote { margin: 28px 0; padding: 20px 24px; border-left: 3px solid #bda677; background: var(--ink2); }
+.article blockquote p { margin: 0; }
+.breadcrumb { font-size: .85rem; margin-bottom: 40px; line-height: 1.8; }
+.breadcrumb a { text-decoration: underline; text-underline-offset: 3px; }
+.closing { border-top: 1px solid #cbd2cd; margin-top: 48px; padding-top: 8px; }
+@media (max-width: 600px) { .article { padding: 40px 22px 64px; } .article blockquote { padding: 16px 18px; } }

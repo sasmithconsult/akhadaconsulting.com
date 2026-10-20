@@ -240,6 +240,7 @@ export default function WhyOffshoreTeamsFail() {
                 stronger after the business has examined what it asked the
                 person to carry.
               </p>
+              <p>For a recurring delivery gap, see how to <Link className="text-link inline-link" href="/employee-keeps-missing-deadlines">discuss repeated missed deadlines</Link>.</p>
             </div>
           </div>
         </section>

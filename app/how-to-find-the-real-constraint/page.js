@@ -385,6 +385,7 @@ export default function HowToFindTheRealConstraint() {
                 better decision, or a missing skill. Diagnosis determines what
                 kind of problem you are actually solving.
               </p>
+              <p>When the operating conditions are clear but deadlines keep slipping, <Link className="text-link inline-link" href="/employee-keeps-missing-deadlines">prepare for the performance conversation</Link>.</p>
             </article>
           </div>
         </section>
