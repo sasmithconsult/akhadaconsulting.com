@@ -18,6 +18,12 @@ export const metadata = {
 
 const insights = [
   {
+    "category": "Management Practice",
+    "title": "When an Employee Keeps Missing Deadlines: Have the Right Conversation",
+    "description": "How to address repeated missed deadlines with clear expectations, room for the person, and a concrete agreement about what changes next.",
+    "href": "/employee-keeps-missing-deadlines"
+},
+  {
     category: "Operating Diagnosis",
     title: "How to Find the Real Constraint in a Growing Company",
     description:
