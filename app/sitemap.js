@@ -4,6 +4,7 @@ export default function sitemap() {
     "",
     "/advisory",
     "/insights",
+    "/employee-keeps-missing-deadlines",
     "/how-to-find-the-real-constraint",
     "/reducing-founder-dependency",
     "/why-managers-escalate-decisions",
