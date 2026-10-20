@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Brand from "@/components/Brand";
 import styles from "./page.module.css";
 
 export const metadata = {
@@ -27,7 +28,7 @@ export default function OffshorePage() {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={styles.masthead}>
-          <Link className={styles.logo} href="/">AKHADA CONSULTING</Link>
+          <Brand />
           <span className={styles.tagline}>Clarity under pressure</span>
         </div>
       </header>
