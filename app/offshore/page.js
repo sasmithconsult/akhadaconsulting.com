@@ -4,11 +4,11 @@ import styles from "./page.module.css";
 
 export const metadata = {
   title: "Get More from Your Offshore Team",
-  description: "Already have an offshore team that isn't delivering what you expected? Akhada Consulting helps identify what's going wrong and improve performance.",
+  description: "You invested in an offshore team to get more done, not create more work. Akhada Consulting helps you identify what's holding performance back and what to do next.",
   alternates: { canonical: "/offshore" },
   openGraph: {
-    title: "Your offshore team isn't delivering what you expected. Let's fix that.",
-    description: "Get more value from the offshore team you already have, without immediately replacing people or adding headcount.",
+    title: "You invested in an offshore team to get more done. Not to create more work for yourself.",
+    description: "Understand what's holding your offshore team back before replacing people or adding headcount.",
     url: "https://akhadaconsulting.com/offshore",
   },
 };
@@ -35,8 +35,8 @@ export default function OffshorePage() {
 
       <main className={styles.main}>
         <p className={styles.eyebrow}>For companies with an existing offshore team</p>
-        <h1>Your offshore team isn&apos;t delivering what you expected. <span className={styles.accent}>Let&apos;s fix that.</span></h1>
-        <p className={styles.subhead}>Get more value from the team you already have, without immediately replacing people or adding headcount.</p>
+        <h1>You invested in an offshore team to get more done. <span className={styles.accent}>Not to create more work for yourself.</span></h1>
+        <p className={styles.subhead}>When your offshore team isn&apos;t performing as expected, you don&apos;t necessarily need to replace people or hire more. You need to understand what&apos;s getting in the way and what to do about it.</p>
 
         {/* Replace this placeholder with your video embed once your VSL is recorded. */}
         <div className={styles.video} aria-label="Placeholder for introductory video from Scott Smith">
@@ -49,16 +49,17 @@ export default function OffshorePage() {
         <p className={styles.note}>A straightforward conversation about your current team and what&apos;s not working.</p>
 
         <div className={styles.rule} />
-        <h2>Sound familiar?</h2>
+        <h2>Imagine an offshore team that:</h2>
         <div className={styles.issues}>
-          <div className={styles.issue}><span aria-hidden="true">✓</span> You&apos;re spending too much time managing your offshore team.</div>
-          <div className={styles.issue}><span aria-hidden="true">✓</span> Deadlines, quality, or communication are inconsistent.</div>
-          <div className={styles.issue}><span aria-hidden="true">✓</span> You expected more capacity, but now you have more work.</div>
+          <div className={styles.issue}><span aria-hidden="true">✓</span> Takes ownership without requiring constant follow-up.</div>
+          <div className={styles.issue}><span aria-hidden="true">✓</span> Communicates problems before they become emergencies.</div>
+          <div className={styles.issue}><span aria-hidden="true">✓</span> Delivers the additional capacity you invested in.</div>
         </div>
 
-        <p className={styles.about}><strong>I&apos;m Scott Smith, Principal Advisor at Akhada Consulting.</strong> I&apos;ve spent decades building and leading teams, including operations across India and the Philippines. I help companies identify what&apos;s preventing their offshore teams from performing and determine what needs to change.</p>
+        <p className={styles.about}><strong>I&apos;m Scott Smith, Principal Advisor at Akhada Consulting.</strong> I&apos;ve spent decades building and leading teams, including operations across India and the Philippines. I help companies identify what&apos;s limiting their offshore team&apos;s performance and determine what needs to change.</p>
         <div className={styles.bottom}>
-          <BookingButton>Let&apos;s Talk</BookingButton>
+          <h2>Let&apos;s find out what&apos;s keeping your team from delivering.</h2>
+          <BookingButton>Schedule a Conversation</BookingButton>
           <p className={styles.note}>No obligation. We&apos;ll talk through your situation and whether I can help.</p>
         </div>
       </main>
