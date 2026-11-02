@@ -4,6 +4,8 @@ const nextConfig = {
 
   async redirects() {
     return [
+{"source": "/why-outsourcing-fails", "destination": "/why-outsourcing-fails-and-how-to-fix-it", "permanent": true},
+{"source": "/why-outsourcing-fails-and-how-to-fix-it-:suffix", "destination": "/why-outsourcing-fails-and-how-to-fix-it", "permanent": true},
       {
         source: "/global-teams",
         destination: "/execution/global-teams",
