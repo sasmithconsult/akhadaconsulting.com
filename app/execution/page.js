@@ -102,6 +102,7 @@ export default function Execution() {
                 Install practical cadences for priorities, accountability,
                 learning, and timely course correction.
               </p>
+              <Link className="text-link" href="/new-manager-still-doing-old-job">Make room for management after a promotion →</Link>
             </div>
           </div>
         </section>
