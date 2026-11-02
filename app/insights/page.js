@@ -17,6 +17,7 @@ export const metadata = {
 };
 
 const insights = [
+{"category": "Outsourcing Decisions", "title": "Why Outsourcing Fails and How to Fix It", "description": "Before replacing an outsourcing provider, examine the work, costs, expectations, and accountability. Decide what to repair, bring back, or stop.", "href": "/why-outsourcing-fails-and-how-to-fix-it"},
   {
     "category": "Management Capacity",
     "title": "When a New Manager Is Still Doing Their Old Job",
