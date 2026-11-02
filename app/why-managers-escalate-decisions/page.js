@@ -322,6 +322,7 @@ export default function WhyManagersEscalateDecisions() {
             . Decision rights become useful when people can apply them in the
             actual flow of work.
           </p>
+          <p>Authority also needs time in the role. Examine what must change <Link className="text-link inline-link" href="/new-manager-still-doing-old-job">when a new manager still carries their previous workload</Link>.</p>
         </section>
 
         <section className="content-block light-section">

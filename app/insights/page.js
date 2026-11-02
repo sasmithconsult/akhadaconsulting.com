@@ -18,6 +18,12 @@ export const metadata = {
 
 const insights = [
   {
+    "category": "Management Capacity",
+    "title": "When a New Manager Is Still Doing Their Old Job",
+    "description": "A promotion needs a workable transition. Decide which delivery duties stay, move, or stop so a new manager has room to lead.",
+    "href": "/new-manager-still-doing-old-job"
+},
+  {
     "category": "Management Practice",
     "title": "When an Employee Keeps Missing Deadlines: Have the Right Conversation",
     "description": "How to address repeated missed deadlines with clear expectations, room for the person, and a concrete agreement about what changes next.",

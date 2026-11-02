@@ -158,6 +158,7 @@ export default function ReducingFounderDependency() {
                 Managers carry tasks and titles, but the founder remains the
                 real owner of the outcome.
               </p>
+              <p>One practical step is to <Link className="text-link inline-link" href="/new-manager-still-doing-old-job">give newly promoted managers room to manage</Link>.</p>
             </div>
             <div className="service-item">
               <h3>Context lives in one person</h3>
