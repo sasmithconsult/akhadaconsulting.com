@@ -178,6 +178,7 @@ export default function WhyManagersEscalateDecisions() {
                 decision get reopened. Formal permission means little when
                 experience says the founder may still take the decision back.
               </p>
+              <p>When direction changes, <Link className="text-link inline-link" href="/founder-keeps-changing-priorities">make the effect of a priority change explicit</Link> so the team knows which commitments still hold.</p>
             </div>
           </div>
         </section>

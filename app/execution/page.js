@@ -46,6 +46,7 @@ export default function Execution() {
               </Link>{" "}
               to identify where progress is actually stopping.
             </p>
+            <p>When new requests interrupt work already promised, examine how you are <Link className="text-link inline-link" href="/founder-keeps-changing-priorities">handling changes to priorities and commitments</Link>.</p>
             <div className="problem-list">
               <div>
                 <span>01</span>Priorities lack a clearly accountable owner.

@@ -93,6 +93,7 @@ return <>
 <p>{"Before the meeting, separate your frustration from the performance you need to address."}</p>
 <p>{"“You never follow through” gives the employee a judgment to defend against. A specific example gives both of you something to examine."}</p>
 <p>{"Write down the agreed result, the deadline, what was delivered, and what happened because the commitment was missed. Include relevant changes you made to the work or its priority. If you changed the assignment without changing the date, that belongs in the conversation too."}</p>
+<p>{"Before judging delivery, "}<Link href="/founder-keeps-changing-priorities">reset commitments when priorities change</Link>{" so the employee knows which agreement they are expected to meet."}</p>
 <p>{"Choose examples that establish the recurring pattern. You do not need to prosecute every disappointment since the person joined the company."}</p>
 <p>{"Then check your own assumptions. Did the employee understand what finished meant? Did they have the time, access, training, and authority the work required? Were they depending on someone who did not deliver?"}</p>
 <p>{"If you cannot answer those questions, begin there. "}<Link className="text-link inline-link" href="/how-to-find-the-real-constraint">{"Finding the real constraint"}</Link>{" matters before deciding what the employee needs to change."}</p>
