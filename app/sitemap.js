@@ -4,6 +4,7 @@ export default function sitemap() {
     "",
     "/advisory",
     "/insights",
+    "/founder-keeps-changing-priorities",
     "/why-outsourcing-fails-and-how-to-fix-it",
     "/new-manager-still-doing-old-job",
     "/employee-keeps-missing-deadlines",

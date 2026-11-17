@@ -17,6 +17,7 @@ export const metadata = {
 };
 
 const insights = [
+  {"category": "Execution Discipline", "title": "When the Founder Keeps Changing Priorities", "description": "When urgent work interrupts existing commitments, decide what moves, shrinks, or stops and tell the people affected.", "href": "/founder-keeps-changing-priorities"},
 {"category": "Outsourcing Decisions", "title": "Why Outsourcing Fails and How to Fix It", "description": "Before replacing an outsourcing provider, examine the work, costs, expectations, and accountability. Decide what to repair, bring back, or stop.", "href": "/why-outsourcing-fails-and-how-to-fix-it"},
   {
     "category": "Management Capacity",
