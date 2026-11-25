@@ -40,6 +40,15 @@ export default function OffshorePage() {
 
 
 
+        <BookingButton>Book a Confidential Consultation</BookingButton>
+        <p className={styles.note}>A free, confidential 30-minute conversation. No preparation required.</p>
+        <div className={styles.rule} />
+        <h2>Imagine an offshore team that:</h2>
+        <div className={styles.issues}>
+          <div className={styles.issue}>Takes ownership without constant follow-up.</div>
+          <div className={styles.issue}>Communicates problems before they become emergencies.</div>
+          <div className={styles.issue}>Delivers the additional capacity you invested in.</div>
+        </div>
         <div className={styles.rule} />
         <h2>How we help you turn performance around.</h2>
         <div className={styles.issues}>
