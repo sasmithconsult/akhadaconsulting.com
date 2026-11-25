@@ -7,7 +7,7 @@ export default function SiteFooter() {
       <div className="footer-grid">
         <div>
           <Brand />
-          <p>Principal advisory for the management problems created by growth.</p>
+          <p>Experienced operational leadership for companies building and improving outsourced teams.</p>
         </div>
         <div>
           <h3>Explore</h3>
