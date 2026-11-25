@@ -12,6 +12,7 @@ const primaryLinks = [
 ];
 
 const howWeHelpLinks = [
+  ["Offshore Operations & Turnarounds", "/offshore"],
   ["Leadership & Management", "/advisory"],
   ["Execution & Operating Clarity", "/execution"],
   ["Global Teams & Capacity", "/execution/global-teams"],
@@ -45,8 +46,8 @@ export default function SiteHeader({ light = false }) {
           className={open ? "open" : ""}
           aria-label="Primary navigation"
         >
-          <Link href="/advisory" onClick={closeNavigation}>
-            Advisory
+          <Link href="/offshore" onClick={closeNavigation}>
+            Offshore Operations
           </Link>
           <div className={`nav-group ${helpOpen ? "open" : ""}`}>
             <button
@@ -77,11 +78,11 @@ export default function SiteHeader({ light = false }) {
           ))}
           <a
             className="nav-cta"
-            href="https://calendly.com/scott8smith/founder-strategy-conversation"
+            href="https://calendly.com/scott8smith/offshore-operations-consultation"
             target="_blank"
             rel="noreferrer"
           >
-            Start a conversation
+            Book a consultation
           </a>
         </nav>
       </div>
