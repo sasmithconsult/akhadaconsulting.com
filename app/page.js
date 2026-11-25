@@ -3,15 +3,15 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import CTA from "@/components/CTA";
 export const metadata = {
-  title: "Founder & Executive Advisory",
+  title: "Offshore Operations & Turnarounds",
   description:
-    "Akhada helps founders and executives strengthen leadership, clarify ownership, improve decisions, and build operating capacity beyond the founder.",
+    "Akhada helps companies fix underperforming outsourced operations, build high-performing offshore teams, and strengthen operational leadership.",
   alternates: { canonical: "/" },
   openGraph: {
     url: "https://akhadaconsulting.com/",
-    title: "Founder & Executive Advisory | Akhada Consulting",
+    title: "Offshore Operations & Turnarounds | Akhada Consulting",
     description:
-      "Build the leadership and operating capacity your business needs to function without everything returning to you.",
+      "Get more value from your outsourced operations with experienced operational leadership.",
   },
 };
 export default function Home() {
@@ -22,54 +22,45 @@ export default function Home() {
         <section className="hero">
           <div className="hero-content">
             <p className="eyebrow">
-              Principal advisory for the management problems created by growth.
+              Outsourcing strategy & operational turnarounds
             </p>
             <h1>
-              You built a successful business. It shouldn’t still require you
-              for everything.
+              Your offshore team should be making your business stronger.
             </h1>
             <p className="lede">
-              Akhada works with founders and executives whose companies have
-              grown faster than their management structure. We clarify
-              ownership, strengthen leadership, improve decision-making, and
-              build the operating capacity the business needs to function
-              without everything coming back to the leader.
+              We help companies fix underperforming outsourced operations, build high-performing teams, and strengthen operational leadership.
             </p>
             <a
               className="button"
-              href="https://calendly.com/scott8smith/founder-strategy-conversation"
+              href="https://calendly.com/scott8smith/offshore-operations-consultation"
               target="_blank"
               rel="noreferrer"
             >
-              Start a conversation <span>↗</span>
+              Book a confidential consultation <span>↗</span>
             </a>
           </div>
         </section>
         <section className="section problem split">
           <div>
-            <p className="eyebrow">The hidden constraint</p>
-            <h2>Growth exposes what effort once concealed.</h2>
+            <p className="eyebrow">When outsourcing falls short</p>
+            <h2>You invested in capacity. Not more work for your managers.</h2>
           </div>
           <div>
             <p className="section-intro">
-              The problem is rarely a lack of commitment. It is that decisions,
-              relationships, and operating knowledge still converge on one
-              person.
+              The problem is not always the offshore team. Leadership, training, communication, and operating structure can all limit performance.
             </p>
             <div className="problem-list">
               <div>
-                <span>01</span>Important decisions wait for the founder.
+                <span>01</span>Your managers spend too much time chasing work.
               </div>
               <div>
-                <span>02</span>Responsibility exists, but authority remains
-                unclear.
+                <span>02</span>Quality and delivery are inconsistent.
               </div>
               <div>
-                <span>03</span>Managers report activity without truly owning
-                outcomes.
+                <span>03</span>Ownership and accountability are unclear.
               </div>
               <div>
-                <span>04</span>More people and tools create motion—not capacity.
+                <span>04</span>The expected financial benefits have not materialized.
               </div>
             </div>
           </div>
@@ -79,12 +70,7 @@ export default function Home() {
             <p className="eyebrow">Experience under pressure</p>
             <h2>Advice grounded in operating reality.</h2>
             <p className="muted">
-              Scott Smith has spent 28 years building, leading, and advising
-              organizations, including building teams across the U.S. and India
-              and operating through periods of rapid growth, M&A, and
-              organizational change. Akhada’s perspective is practical:
-              leadership is demonstrated through judgment, responsibility, and
-              the systems that allow others to act well.
+              Scott Smith has spent decades building, leading, and advising organizations, including 15 years working with teams in India, three years living there, and experience leading teams in the Philippines. He understands the challenges on both sides of an outsourcing relationship.
             </p>
           </div>
           <figure className="principal-portrait">
@@ -97,48 +83,41 @@ export default function Home() {
             <figcaption>Scott Smith · Principal Advisor</figcaption>
           </figure>
           <blockquote className="quote">
-            The goal is not to make the leader less important. It is to make the
-            organization more capable.
+            The goal is not simply lower labor costs. It is a stronger, more capable business.
           </blockquote>
         </section>
         <section className="section">
-          <p className="eyebrow">Core advisory areas</p>
+          <p className="eyebrow">How we help</p>
           <div className="split">
-            <h2>Clarity before complexity.</h2>
+            <h2>Fix. Build. Lead.</h2>
             <p className="section-intro">
-              The work begins by identifying the actual constraint—not applying
-              a fashionable answer to the visible symptom.
+              Whether you have an existing offshore team or are building one, we focus on the business outcomes you need.
             </p>
           </div>
           <div className="cards">
-            <Link className="card" href="/advisory">
-              <span className="card-num">01 / ADVISORY</span>
-              <h3>Leadership &amp; Management Advisory</h3>
+            <Link className="card" href="/offshore">
+              <span className="card-num">01 / FIX</span>
+              <h3>Fix underperforming operations</h3>
               <p>
-                Clarify the decisions that matter, who has the right to make
-                them, and how leaders exercise judgment when the answer is not
-                obvious.
+                Identify what is holding your offshore operation back and restore performance through practical changes to leadership, workflows, and accountability.
               </p>
-              <span className="text-link">Explore advisory →</span>
-            </Link>
-            <Link className="card" href="/execution">
-              <span className="card-num">02 / EXECUTION</span>
-              <h3>Operating Clarity &amp; Execution</h3>
-              <p>
-                Turn priorities into operating reality through clearer handoffs,
-                management cadence, meeting structure, and follow-through.
-              </p>
-              <span className="text-link">Explore execution →</span>
+              <span className="text-link">Explore operational turnarounds →</span>
             </Link>
             <Link className="card" href="/execution/global-teams">
-              <span className="card-num">03 / GLOBAL TEAMS</span>
-              <h3>Global Teams</h3>
+              <span className="card-num">02 / BUILD</span>
+              <h3>Build high-performing teams</h3>
               <p>
-                Design offshore and outsourced work so authority travels with
-                responsibility—without creating another layer of dependency
-                back on the founder.
+                Build offshore capacity with clear roles, training, management structure, and measurable expectations.
               </p>
               <span className="text-link">Explore global teams →</span>
+            </Link>
+            <Link className="card" href="/advisory">
+              <span className="card-num">03 / LEAD</span>
+              <h3>Lead distributed operations</h3>
+              <p>
+                Strengthen management, decision-making, and accountability with experienced operational leadership.
+              </p>
+              <span className="text-link">Explore advisory →</span>
             </Link>
           </div>
         </section>
@@ -206,8 +185,10 @@ export default function Home() {
           </div>
         </section>
         <CTA
-          title="Turn founder-led coordination into a management system that can carry the next stage of growth."
-          text="If decisions still converge on you, a focused conversation can surface where judgment, ownership, or operating structure is breaking down—and what to change first."
+          title="Get more from your outsourced operations."
+          text="Book a confidential 30-minute conversation about your team, your expectations, and what needs to change. No obligation or preparation required."
+          href="https://calendly.com/scott8smith/offshore-operations-consultation"
+          label="Book an offshore operations consultation"
         />
       </main>
       <SiteFooter />
