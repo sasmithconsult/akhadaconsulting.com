@@ -6,11 +6,11 @@ import { Analytics } from "@vercel/analytics/next";
 export const metadata = {
   metadataBase: new URL("https://akhadaconsulting.com"),
   title: {
-    default: "Akhada Consulting | Leadership, Judgment & Execution",
+    default: "Akhada Consulting | Offshore Operations & Turnarounds",
     template: "%s | Akhada Consulting",
   },
   description:
-    "Principal advisory for founders and executives building leadership capacity, operating clarity, and organizations that function beyond the founder.",
+    "We help companies fix underperforming outsourced operations, build high-performing offshore teams, and strengthen operational leadership.",
   alternates: { canonical: "/" },
   icons: {
     icon: [{ url: "/images/akhada-favicon.png", type: "image/png" }],
@@ -19,9 +19,9 @@ export const metadata = {
   openGraph: {
     type: "website",
     siteName: "Akhada Consulting",
-    title: "Akhada Consulting | Leadership, Judgment & Execution",
+    title: "Akhada Consulting | Offshore Operations & Turnarounds",
     description:
-      "Principal advisory for leaders building stronger management and operating capacity.",
+      "Experienced operational leadership for companies building or improving outsourced teams.",
     url: "https://akhadaconsulting.com",
   },
   twitter: { card: "summary_large_image" },

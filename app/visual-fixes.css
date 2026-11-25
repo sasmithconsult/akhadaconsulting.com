@@ -183,3 +183,23 @@
     text-align: center;
   }
 }
+
+
+/* Keep the homepage authority and services sections visually connected. */
+.authority-with-portrait {
+  padding-bottom: clamp(24px, 3vw, 44px);
+}
+.authority-with-portrait + .section {
+  padding-top: clamp(24px, 3vw, 44px);
+}
+.authority-with-portrait .quote {
+  margin: 0;
+}
+@media (max-width: 800px) {
+  .authority-with-portrait {
+    gap: 28px;
+  }
+  .authority-with-portrait .quote:before {
+    margin-bottom: 16px;
+  }
+}
